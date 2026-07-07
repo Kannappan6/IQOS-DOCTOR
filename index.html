@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IQOS Device Diagnostics Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="IQOS device diagnostics demo">
+        <aside class="sidebar">
+          <div class="brand-lockup" aria-label="PMI and IBM">
+            <span class="pmi-logo">PMI</span>
+            <span class="brand-divider"></span>
+            <span class="ibm-logo">IBM</span>
+          </div>
+
+          <div>
+            <p class="eyebrow">Demo support tool</p>
+            <h1>IQOS Diagnostics</h1>
+            <p class="intro">
+              Connect a sample device, run automated checks, and show a support-ready result.
+            </p>
+          </div>
+
+          <div class="session-card">
+            <span class="status-dot" id="statusDot" aria-hidden="true"></span>
+            <div>
+              <strong id="sessionState">Waiting for device</strong>
+              <span id="sessionSummary">No diagnostic started</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <header class="topbar">
+            <div>
+              <p class="eyebrow" id="phaseLabel">Device connection</p>
+              <h2 id="screenTitle">Connect IQOS device</h2>
+            </div>
+            <button class="ghost-button" id="resetButton" type="button">Reset</button>
+          </header>
+
+          <section class="diagnostics-layout">
+            <div class="device-visual">
+              <img src="assets/iqos-device-demo.png" alt="IQOS style device and pocket charger" />
+              <div class="signal-ring" id="signalRing" aria-hidden="true"></div>
+            </div>
+
+            <div class="device-list" aria-label="Connected devices">
+              <article class="device-row" id="chargerRow">
+                <span class="device-alert" aria-hidden="true">!</span>
+                <img src="assets/charger.svg" alt="Pocket charger" />
+                <div class="device-meta">
+                  <div class="device-title">
+                    <strong>Charger</strong>
+                    <span class="battery-icon" aria-label="Battery level"><span></span></span>
+                  </div>
+                  <div class="serial-line">
+                    <span>T8GXPQS9005F1G</span>
+                    <button class="copy-button" type="button" aria-label="Copy charger serial">□</button>
+                  </div>
+                  <div class="mini-progress"><span id="chargerProgress"></span></div>
+                </div>
+              </article>
+
+              <article class="device-row" id="holderRow">
+                <span class="device-alert" aria-hidden="true">!</span>
+                <img src="assets/holder.svg" alt="Holder" />
+                <div class="device-meta">
+                  <div class="device-title">
+                    <strong>Holder</strong>
+                    <span class="battery-icon" aria-label="Battery level"><span></span></span>
+                  </div>
+                  <div class="serial-line">
+                    <span>H2LK90A7142B</span>
+                    <button class="copy-button" type="button" aria-label="Copy holder serial">□</button>
+                  </div>
+                  <div class="mini-progress"><span id="holderProgress"></span></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="diagnostic-card">
+              <div class="diagnostic-head">
+                <span id="diagnosticBadge">USB-C</span>
+                <strong id="diagnosticStatus">Device not connected</strong>
+              </div>
+              <div class="scan-progress" aria-label="Diagnostic progress">
+                <span id="scanProgress"></span>
+              </div>
+              <p id="diagnosticMessage">
+                Attach the IQOS device to begin a simulated diagnostics session.
+              </p>
+            </div>
+          </section>
+
+          <section id="content" class="content" aria-live="polite"></section>
+
+          <footer class="actions">
+            <button class="secondary-button" id="secondaryButton" type="button">View Checklist</button>
+            <button class="primary-button" id="primaryButton" type="button">Connect Device</button>
+          </footer>
+        </section>
+      </section>
+    </main>
+
+    <script src="diagnostics.js"></script>
+  </body>
+</html>
