@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="120" viewBox="0 0 180 120" role="img" aria-label="Holder">
+  <rect width="180" height="120" fill="#f8fafc"/>
+  <rect x="79" y="10" width="22" height="100" rx="11" fill="#ffffff" stroke="#cfd7df" stroke-width="3"/>
+  <rect x="84" y="20" width="12" height="52" rx="6" fill="#eef2f6"/>
+  <rect x="85" y="82" width="10" height="15" rx="5" fill="#2f80ed"/>
+  <circle cx="90" cy="101" r="3" fill="#9aa7b4"/>
+</svg>
