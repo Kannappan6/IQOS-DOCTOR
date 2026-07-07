@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="120" viewBox="0 0 180 120" role="img" aria-label="Pocket charger">
+  <rect width="180" height="120" fill="#f8fafc"/>
+  <rect x="45" y="14" width="90" height="92" rx="18" fill="#ffffff" stroke="#cfd7df" stroke-width="3"/>
+  <rect x="57" y="26" width="66" height="68" rx="13" fill="#eef2f6"/>
+  <rect x="71" y="36" width="38" height="8" rx="4" fill="#9aa7b4"/>
+  <circle cx="90" cy="75" r="8" fill="#2f80ed"/>
+  <circle cx="90" cy="75" r="3" fill="#ffffff"/>
+</svg>
